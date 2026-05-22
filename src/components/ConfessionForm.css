@@ -10,36 +10,37 @@
 .confession-textarea {
   width: 100%;
   box-sizing: border-box;
-  padding: 16px 60px 16px 18px;
-  border: 1px solid #2a2330;
-  border-radius: 10px;
-  background: #131016;
-  color: #e8e0d0;
+  padding: 18px 60px 18px 20px;
+  border: 1px solid #2c221e;
+  border-radius: 8px;
+  background: #141110;
+  color: #e4d9c8;
   font-family: 'Georgia', 'Times New Roman', serif;
   font-size: 15px;
-  line-height: 1.55;
+  line-height: 1.65;
   resize: vertical;
-  min-height: 90px;
+  min-height: 100px;
   outline: none;
-  transition: border-color 0.2s;
+  transition: border-color 0.3s, box-shadow 0.3s;
 }
 
 .confession-textarea::placeholder {
-  color: #4a4450;
+  color: #4a3f35;
   font-style: italic;
 }
 
 .confession-textarea:focus {
-  border-color: #c9a85e;
+  border-color: #b89a5a;
+  box-shadow: 0 0 0 1px rgba(184, 154, 90, 0.15);
 }
 
 .char-counter {
   position: absolute;
   bottom: 14px;
-  right: 16px;
+  right: 18px;
   font-family: system-ui, 'Segoe UI', Roboto, sans-serif;
   font-size: 12px;
-  color: #6b6570;
+  color: #5c5248;
   transition: color 0.2s;
 }
 
@@ -59,18 +60,17 @@
   display: inline-block;
   padding: 10px 32px;
   border: none;
-  border-radius: 8px;
-  background: #c9a85e;
-  color: #0a0a0f;
-  font-family: system-ui, 'Segoe UI', Roboto, sans-serif;
+  border-radius: 6px;
+  background: #b89a5a;
+  color: #0d0b0a;
+  font-family: 'Georgia', 'Times New Roman', serif;
   font-size: 15px;
-  font-weight: 600;
   cursor: pointer;
-  transition: background 0.2s, opacity 0.2s;
+  transition: background 0.25s, opacity 0.25s;
 }
 
 .submit-btn:hover:not(:disabled) {
-  background: #dcc07a;
+  background: #d4b87a;
 }
 
 .submit-btn:disabled {
@@ -91,10 +91,11 @@
 
 .acknowledgment {
   font-family: 'Georgia', 'Times New Roman', serif;
-  font-size: 15px;
-  color: #c9a85e;
+  font-size: 14px;
+  color: #b89a5a;
   text-align: center;
-  margin: 16px 0 0;
-  animation: riseUp 0.5s ease-out;
+  margin: 18px 0 0;
+  animation: riseUp 0.6s ease-out;
   font-style: italic;
+  line-height: 1.5;
 }

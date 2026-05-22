@@ -12,17 +12,27 @@
 
 .app-header h1 {
   font-family: 'Georgia', 'Times New Roman', serif;
-  font-size: 36px;
+  font-size: 34px;
   font-weight: 400;
-  color: #f5e6b8;
-  letter-spacing: 1px;
-  margin: 0 0 8px;
+  color: #e8d5a8;
+  letter-spacing: 2px;
+  margin: 0 0 6px;
+}
+
+.app-header::after {
+  content: '\2014';
+  display: block;
+  color: #4a3f35;
+  font-size: 18px;
+  letter-spacing: 6px;
+  margin-bottom: 20px;
 }
 
 .app-subtitle {
   font-family: 'Georgia', 'Times New Roman', serif;
   font-size: 17px;
-  color: #c9a85e;
+  font-weight: 400;
+  color: #b89a5a;
   margin: 0 0 16px;
   line-height: 1.5;
 }
@@ -30,9 +40,9 @@
 .app-intro {
   font-family: system-ui, 'Segoe UI', Roboto, sans-serif;
   font-size: 14px;
-  color: #6b6570;
-  line-height: 1.6;
-  max-width: 480px;
+  color: #6b5f52;
+  line-height: 1.7;
+  max-width: 460px;
   margin: 0 auto;
 }
 
