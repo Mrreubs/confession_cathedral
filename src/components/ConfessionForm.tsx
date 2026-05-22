@@ -14,6 +14,12 @@ export default function ConfessionForm({ onAddConfession }: ConfessionFormProps)
 
   const remaining = MAX_CHARS - text.length;
 
+  function handleInput(value: string) {
+    const clamped = value.length > MAX_CHARS ? value.slice(0, MAX_CHARS) : value;
+    setText(clamped);
+    if (error) setError('');
+  }
+
   function handleSubmit(e: FormEvent) {
     e.preventDefault();
 
@@ -31,25 +37,28 @@ export default function ConfessionForm({ onAddConfession }: ConfessionFormProps)
   return (
     <form className="confession-form" onSubmit={handleSubmit}>
       <div className="textarea-wrapper">
+        <label htmlFor="confession-input" className="sr-only">
+          Your confession
+        </label>
         <textarea
+          id="confession-input"
           ref={textareaRef}
           className="confession-textarea"
           placeholder="Drop your truth..."
-          maxLength={MAX_CHARS + 20}
+          maxLength={MAX_CHARS}
           value={text}
-          onChange={(e) => {
-            setText(e.target.value);
-            if (error) setError('');
-          }}
+          onChange={(e) => handleInput(e.target.value)}
           rows={4}
         />
         <span
           className={`char-counter ${remaining <= 0 ? 'over' : ''}`}
+          aria-live="polite"
+          aria-label={`${remaining} characters remaining`}
         >
           {remaining}
         </span>
       </div>
-      {error && <p className="form-error">{error}</p>}
+      {error && <p className="form-error" role="alert">{error}</p>}
       <button
         type="submit"
         className="submit-btn"

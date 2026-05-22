@@ -1,5 +1,5 @@
 export interface Confession {
-  id: number;
+  id: string;
   text: string;
   timestamp: Date;
 }

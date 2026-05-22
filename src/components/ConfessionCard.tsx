@@ -1,3 +1,4 @@
+import { useMemo } from 'react';
 import type { Confession } from '../types';
 import './ConfessionCard.css';
 
@@ -17,10 +18,12 @@ interface ConfessionCardProps {
 }
 
 export default function ConfessionCard({ confession }: ConfessionCardProps) {
+  const timeAgoText = useMemo(() => timeAgo(confession.timestamp), [confession.timestamp]);
+
   return (
     <article className="confession-card">
       <p className="confession-text">{confession.text}</p>
-      <time className="confession-time">{timeAgo(confession.timestamp)}</time>
+      <time className="confession-time">{timeAgoText}</time>
     </article>
   );
 }

@@ -1,6 +1,8 @@
 import { useState, useCallback } from 'react';
 import type { Confession } from '../types';
 
+const MAX_CONFESSIONS = 500;
+
 export function useConfessions() {
   const [confessions, setConfessions] = useState<Confession[]>([]);
 
@@ -9,12 +11,12 @@ export function useConfessions() {
     if (trimmed.length === 0) return false;
 
     const newConfession: Confession = {
-      id: Date.now(),
+      id: crypto.randomUUID(),
       text: trimmed,
       timestamp: new Date(),
     };
 
-    setConfessions((prev) => [newConfession, ...prev]);
+    setConfessions((prev) => [newConfession, ...prev].slice(0, MAX_CONFESSIONS));
     return true;
   }, []);
 
