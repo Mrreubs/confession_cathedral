@@ -5,10 +5,10 @@
 
 .feed-empty {
   text-align: center;
-  padding: 80px 20px;
-  color: #5c5248;
-  font-family: 'Georgia', 'Times New Roman', serif;
-  font-size: 15px;
+  padding: var(--space-6xl) var(--space-xl);
+  color: var(--color-text-dim);
+  font-family: var(--font-serif);
+  font-size: var(--text-md);
   font-style: italic;
   line-height: 1.6;
 }

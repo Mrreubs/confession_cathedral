@@ -1,48 +1,48 @@
 .app {
-  max-width: 640px;
+  max-width: var(--max-width-app);
   margin: 0 auto;
-  padding: 48px 20px 80px;
+  padding: var(--space-5xl) var(--space-xl) var(--space-6xl);
   min-height: 100svh;
 }
 
 .app-header {
   text-align: center;
-  margin-bottom: 40px;
+  margin-bottom: var(--space-4xl);
 }
 
 .app-header h1 {
-  font-family: 'Georgia', 'Times New Roman', serif;
-  font-size: 34px;
+  font-family: var(--font-serif);
+  font-size: var(--text-3xl);
   font-weight: 400;
-  color: #e8d5a8;
+  color: var(--color-accent-text);
   letter-spacing: 2px;
-  margin: 0 0 6px;
+  margin: 0 0 var(--space-xs);
 }
 
 .app-header::after {
   content: '\2014';
   display: block;
-  color: #4a3f35;
-  font-size: 18px;
+  color: var(--color-divider);
+  font-size: var(--text-2xl);
   letter-spacing: 6px;
-  margin-bottom: 20px;
+  margin-bottom: var(--space-xl);
 }
 
 .app-subtitle {
-  font-family: 'Georgia', 'Times New Roman', serif;
-  font-size: 17px;
+  font-family: var(--font-serif);
+  font-size: var(--text-xl);
   font-weight: 400;
-  color: #b89a5a;
-  margin: 0 0 16px;
+  color: var(--color-accent);
+  margin: 0 0 var(--space-lg);
   line-height: 1.5;
 }
 
 .app-intro {
-  font-family: system-ui, 'Segoe UI', Roboto, sans-serif;
-  font-size: 14px;
-  color: #6b5f52;
+  font-family: var(--font-sans);
+  font-size: var(--text-base);
+  color: var(--color-text-muted);
   line-height: 1.7;
-  max-width: 460px;
+  max-width: var(--max-width-intro);
   margin: 0 auto;
 }
 

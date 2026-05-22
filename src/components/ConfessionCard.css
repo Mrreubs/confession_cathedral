@@ -1,7 +1,7 @@
 @keyframes fadeIn {
   from {
     opacity: 0;
-    transform: translateY(10px);
+    transform: translateY(0.625rem);
   }
   to {
     opacity: 1;
@@ -10,29 +10,29 @@
 }
 
 .confession-card {
-  background: #141110;
-  border: 1px solid #2c221e;
-  border-radius: 8px;
-  padding: 20px 24px;
-  margin-bottom: 12px;
+  background: var(--color-bg-elevated);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  padding: var(--space-xl) var(--space-2xl);
+  margin-bottom: var(--space-md);
   animation: fadeIn 0.5s ease-out;
   box-shadow: 0 1px 4px rgba(0, 0, 0, 0.4);
 }
 
 .confession-text {
-  font-family: 'Georgia', 'Times New Roman', serif;
-  font-size: 16px;
+  font-family: var(--font-serif);
+  font-size: var(--text-lg);
   line-height: 1.65;
-  color: #e4d9c8;
-  margin: 0 0 12px;
+  color: var(--color-text);
+  margin: 0 0 var(--space-md);
   word-break: break-word;
   white-space: pre-wrap;
 }
 
 .confession-time {
-  font-family: system-ui, 'Segoe UI', Roboto, sans-serif;
-  font-size: 11px;
-  color: #5c5248;
+  font-family: var(--font-sans);
+  font-size: var(--text-xs);
+  color: var(--color-text-dim);
   letter-spacing: 0.5px;
   text-transform: uppercase;
 }

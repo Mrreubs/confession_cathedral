@@ -5,11 +5,53 @@
 }
 
 :root {
-  font-family: system-ui, 'Segoe UI', Roboto, sans-serif;
-  font-size: 16px;
+  --color-bg: #0d0b0a;
+  --color-bg-elevated: #141110;
+  --color-text: #e4d9c8;
+  --color-text-muted: #6b5f52;
+  --color-text-dim: #5c5248;
+  --color-text-placeholder: #4a3f35;
+  --color-accent: #b89a5a;
+  --color-accent-hover: #d4b87a;
+  --color-accent-text: #e8d5a8;
+  --color-border: #2c221e;
+  --color-error: #e05252;
+  --color-divider: #4a3f35;
+
+  --font-serif: 'Georgia', 'Times New Roman', serif;
+  --font-sans: system-ui, 'Segoe UI', Roboto, sans-serif;
+
+  --space-xs: 0.25rem;
+  --space-sm: 0.5rem;
+  --space-md: 0.75rem;
+  --space-lg: 1rem;
+  --space-xl: 1.25rem;
+  --space-2xl: 1.5rem;
+  --space-3xl: 2rem;
+  --space-4xl: 2.5rem;
+  --space-5xl: 3rem;
+  --space-6xl: 5rem;
+
+  --text-xs: 0.6875rem;
+  --text-sm: 0.75rem;
+  --text-base: 0.875rem;
+  --text-md: 0.9375rem;
+  --text-lg: 1rem;
+  --text-xl: 1.0625rem;
+  --text-2xl: 1.125rem;
+  --text-3xl: 2.125rem;
+
+  --radius-sm: 0.375rem;
+  --radius-md: 0.5rem;
+
+  --max-width-app: 40rem;
+  --max-width-intro: 28.75rem;
+
+  font-family: var(--font-sans);
+  font-size: 100%;
   line-height: 1.5;
-  color: #e4d9c8;
-  background: #0d0b0a;
+  color: var(--color-text);
+  background: var(--color-bg);
   color-scheme: dark;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -21,7 +63,7 @@ body {
   background:
     radial-gradient(ellipse 80% 60% at 50% 40%, rgba(40, 30, 20, 0.6) 0%, transparent 100%),
     radial-gradient(ellipse 60% 50% at 80% 80%, rgba(30, 25, 20, 0.4) 0%, transparent 100%),
-    #0d0b0a;
+    var(--color-bg);
 }
 
 #root {
