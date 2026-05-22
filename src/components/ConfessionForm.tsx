@@ -1,7 +1,15 @@
-import { useState, useRef, type FormEvent } from 'react';
+import { useState, useRef, useEffect, type FormEvent } from 'react';
 import './ConfessionForm.css';
 
 const MAX_CHARS = 280;
+
+const affirmations = [
+  'It\'s out there now. You can breathe.',
+  'The wall is listening. Always.',
+  'Your truth belongs here.',
+  'That took courage. Thank you.',
+  'It\'s safe here. You are safe.',
+];
 
 interface ConfessionFormProps {
   onAddConfession: (text: string) => boolean;
@@ -10,6 +18,7 @@ interface ConfessionFormProps {
 export default function ConfessionForm({ onAddConfession }: ConfessionFormProps) {
   const [text, setText] = useState('');
   const [error, setError] = useState('');
+  const [acknowledged, setAcknowledged] = useState('');
   const textareaRef = useRef<HTMLTextAreaElement>(null);
 
   const remaining = MAX_CHARS - text.length;
@@ -31,8 +40,15 @@ export default function ConfessionForm({ onAddConfession }: ConfessionFormProps)
 
     setError('');
     setText('');
+    setAcknowledged(affirmations[Math.floor(Math.random() * affirmations.length)]);
     textareaRef.current?.focus();
   }
+
+  useEffect(() => {
+    if (!acknowledged) return;
+    const timer = setTimeout(() => setAcknowledged(''), 4000);
+    return () => clearTimeout(timer);
+  }, [acknowledged]);
 
   return (
     <form className="confession-form" onSubmit={handleSubmit}>
@@ -66,6 +82,11 @@ export default function ConfessionForm({ onAddConfession }: ConfessionFormProps)
       >
         Confess
       </button>
+      {acknowledged && (
+        <p className="acknowledgment" role="status" key={acknowledged}>
+          {acknowledged}
+        </p>
+      )}
     </form>
   );
 }
