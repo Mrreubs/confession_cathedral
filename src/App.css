@@ -1,0 +1,33 @@
+.app {
+  max-width: 640px;
+  margin: 0 auto;
+  padding: 48px 20px 80px;
+  min-height: 100svh;
+}
+
+.app-header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.app-header h1 {
+  font-family: 'Georgia', 'Times New Roman', serif;
+  font-size: 36px;
+  font-weight: 400;
+  color: #f5e6b8;
+  letter-spacing: 1px;
+  margin: 0 0 8px;
+}
+
+.app-subtitle {
+  font-family: system-ui, 'Segoe UI', Roboto, sans-serif;
+  font-size: 14px;
+  color: #6b6570;
+  font-style: italic;
+  margin: 0;
+}
+
+.app-main {
+  display: flex;
+  flex-direction: column;
+}
