@@ -20,11 +20,20 @@
 }
 
 .app-subtitle {
+  font-family: 'Georgia', 'Times New Roman', serif;
+  font-size: 17px;
+  color: #c9a85e;
+  margin: 0 0 16px;
+  line-height: 1.5;
+}
+
+.app-intro {
   font-family: system-ui, 'Segoe UI', Roboto, sans-serif;
   font-size: 14px;
   color: #6b6570;
-  font-style: italic;
-  margin: 0;
+  line-height: 1.6;
+  max-width: 480px;
+  margin: 0 auto;
 }
 
 .app-main {
